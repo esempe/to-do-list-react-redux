@@ -1,12 +1,16 @@
 import React, {useState} from 'react';
 import styles from "./InputSection.module.css";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addTask} from "../../../data/taskSlice";
 import {nanoid} from "@reduxjs/toolkit";
 
 const InputSection = () => {
+
     let [taskText, setText] = useState('');
     let dispatch = useDispatch()
+
+    let time = useSelector(state => state.time).currentTime
+
     const onTextChange = e => setText(e.target.value)
     let onTaskSave = () =>{
         if(taskText){
@@ -14,7 +18,7 @@ const InputSection = () => {
                 addTask({
                     id:nanoid(),
                     title: taskText,
-                    createdAt: 'xz'
+                    createdAt: time,
                 }),
                 setText('')
             )

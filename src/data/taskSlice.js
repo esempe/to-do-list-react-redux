@@ -1,11 +1,16 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, nanoid} from "@reduxjs/toolkit";
 
 let initialState = [
-    {id: '1', title: 'купить слона', createdAt: 'time'},
-    {id: '2', title: 'нарики лохи', createdAt: '121212'},
-    {id: '2', title: 'нарики лохи', createdAt: '121212'},
-
-
+    {
+        id: nanoid(),
+        title: 'texxxssf',
+        createdAt: 'xz'
+    },
+    {
+        id: nanoid(),
+        title: 'taskText',
+        createdAt: 'xz'
+    }
 ]
 
 
@@ -14,7 +19,7 @@ export const tasksSlice = createSlice(
         name: 'tasks',
         initialState,
         reducers: {
-            addTask(state,action){
+            addTask(state, action) {
                 state.push(action.payload)
             }
         }

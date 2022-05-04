@@ -1,0 +1,40 @@
+
+.taskList{
+    display: flex;
+
+    flex-direction: column-reverse;
+}
+.taskItemWrapper{
+    border-radius: 5px;
+    padding: 15px 15px 15px 15px;
+    max-width: 490px;
+    width: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F1EFE1;
+    margin-bottom: 32px;
+
+}
+.taskCheckBox{
+    width: 30px;
+    height: 30px;
+    background: #F1EFE1;
+    margin-right: 25px;
+}
+.taskBody{
+
+}
+.taskItemControl{
+    display: flex;
+
+}
+.deleteTask{
+
+}
+.editTask{
+
+}
+.starTask{
+
+}

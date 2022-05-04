@@ -84,12 +84,12 @@ body{
     justify-content: center;
 }
 .inputSection{
-
+    margin-bottom: 29px;
 }
 .inputWrapper{
     display: flex;
     justify-content: center;
-
+    transition: 0.5s;
 }
 
 .input{
@@ -100,6 +100,11 @@ body{
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     background-color: #F1EFE1;
+
+}
+.inputWrapper:focus-within {
+    transform: scale(1.1);
+    transition: 0.5s;
 
 }
 
