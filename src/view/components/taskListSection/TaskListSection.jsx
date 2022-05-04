@@ -9,11 +9,6 @@ const TaskListSection = () => {
     let renderedTasks = tasks.map(task =>
         <TaskItem title={task.title} id={task.id}/>
     )
-    const task = useSelector(state =>
-        state.tasks
-    )
-    console.log(task)
-
     return (
         <div className={styles.taskList}>
             {renderedTasks}

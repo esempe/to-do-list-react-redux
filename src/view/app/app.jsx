@@ -5,7 +5,7 @@ import InputSection from "../components/InputSection/InputSection";
 import TaskItem from "../components/taskListSection/taskItem/taskItem";
 import TaskListSection from "../components/taskListSection/TaskListSection";
 import {Redirect, Route, Routes} from "react-router-dom";
-import SingleTaskItem from "../components/taskListSection/SingleTaskItem";
+import SingleTaskItem from "../components/taskListSection/SingleTaskItem/SingleTaskItem";
 
 const App = (props) => {
     return (
