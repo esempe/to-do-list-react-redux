@@ -57,10 +57,12 @@ const SingleTaskItem = (props) => {
                    className={styles.taskCheckBox}
 
             />
-            <textarea value={editedText}
+            <input value={editedText}
+                        type='text'
                       onChange={onEditedTextChange}
                       className={styles.textArea}
-            ></textarea>
+
+            ></input>
             <div className={styles.taskItemControl}>
                 <NavLink
                     to="/"

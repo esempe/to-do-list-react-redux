@@ -23,7 +23,6 @@ const InputSection = () => {
                 }),
                 setText('')
             )
-
         }
     }
 
@@ -39,6 +38,11 @@ const InputSection = () => {
                        placeholder={'need to do smt?'}
                        value={taskText}
                        onChange={onTextChange}
+                       onKeyDown={(e)=>{
+                           if(e.key === 'Enter'){
+                               onTaskSave()
+                           }
+                       }}
                 />
                 <div className={styles.inputButton}
                      onClick={onTaskSave}
