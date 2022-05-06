@@ -79,12 +79,28 @@ body{
 }
 
 .active{
+    display: flex;
+    align-items: center;
     color: black;
     transform: scale(1.1);
     transition: 0.2s;
 }
 .navItem{
+    display: flex;
+    align-items: center;
     color: #7D7D7D;
     transition: 0.2s;
-
+}
+.completedCounter{
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 11px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: #B59182;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
 }

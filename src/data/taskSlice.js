@@ -3,13 +3,13 @@ import {createSlice, nanoid} from "@reduxjs/toolkit";
 let initialState =[
     {
         id: nanoid(),
-        title: 'texxxssf',
+        title: 'сделанная задача',
         createdAt: 'xz',
-        isComplete: false
+        isComplete: true
     },
     {
         id: nanoid(),
-        title: 'taskText',
+        title: 'не сделанная',
         createdAt: 'xz',
         isComplete: false
     }

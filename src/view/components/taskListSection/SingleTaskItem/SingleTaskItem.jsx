@@ -2,11 +2,12 @@ import React, {useState} from 'react';
 import styles from "./SingleTask.module.css";
 import {NavLink, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteTask, editTask} from "../../../../data/taskSlice";
+import {deleteTask, editTask, isCompleted, isUnCompleted} from "../../../../data/taskSlice";
 
 
 const SingleTaskItem = (props) => {
     //hooks
+    debugger
     const {taskId} = useParams();
     const task = useSelector(state =>
         state.tasks.find(task => task.id === taskId));
@@ -14,6 +15,7 @@ const SingleTaskItem = (props) => {
     let [editedText, setEditText] = useState(task.title);
     let dispatch = useDispatch();
     //fun
+    checkBoxStatus = task.isComplete
     let onEditedTextChange = e => setEditText(e.target.value);
     let onEditedTaskSave = () => {
         dispatch(
@@ -27,13 +29,31 @@ const SingleTaskItem = (props) => {
     let onDeleteClick = () => {
         dispatch(
             deleteTask(
-                {id: props.id,}
+                {id: task.id,},
             )
         )
+    };
+    let onSetCheckBox = (e) => {
+        setTimeout(() => setCheckboxStatus(e.target.checked), 1000)
+        if (checkBoxStatus) {
+            dispatch(
+                isUnCompleted({
+                    id: task.id
+                })
+            )
+        } else dispatch(
+            isCompleted({
+                id: task.id
+            })
+        )
     }
+
+
     return (
         <div className={styles.taskItemWrapper}>
             <input type="checkbox"
+                   checked={checkBoxStatus}
+                   onChange={onSetCheckBox}
                    className={styles.taskCheckBox}
 
             />

@@ -5,28 +5,26 @@ import {useDispatch} from "react-redux";
 import {deleteTask, isCompleted, isUnCompleted} from "../../../../data/taskSlice";
 
 
-
-
-
 const TaskItem = (props) => {
     //hooks
     let [checkBoxStatus, setCheckboxStatus] = useState(false)
     let dispatch = useDispatch();
     //func
-    let onDeleteClick =()=>{
+    checkBoxStatus = props.isComplete
+    let onDeleteClick = () => {
         dispatch(
             deleteTask(
                 {id: props.id,}))
     }
-    let onSetCheckBox =(e)=>{
-        setCheckboxStatus(e.target.checked)
-        if (checkBoxStatus){
+    let onSetCheckBox = (e) => {
+        setTimeout(() => setCheckboxStatus(e.target.checked), 1000)
+        if (checkBoxStatus) {
             dispatch(
                 isUnCompleted({
                     id: props.id
                 })
             )
-        }else dispatch(
+        } else dispatch(
             isCompleted({
                 id: props.id
             })
@@ -36,7 +34,7 @@ const TaskItem = (props) => {
     return (
         <div className={styles.taskItemWrapper}>
             <input type="checkbox" className={styles.taskCheckBox}
-                    checked={checkBoxStatus}
+                   checked={checkBoxStatus}
                    onChange={onSetCheckBox}
             />
             <div className={styles.taskBody}>
@@ -44,7 +42,7 @@ const TaskItem = (props) => {
             </div>
             <div className={styles.taskItemControl}>
                 <div className={styles.deleteTask}
-                    onClick={onDeleteClick}
+                     onClick={onDeleteClick}
                 >
                 </div>
                 <NavLink
@@ -58,6 +56,20 @@ const TaskItem = (props) => {
 };
 
 
-
-
 export default TaskItem;
+
+/*
+event => {
+                       setTimeout(() => setCheckboxStatus(event.target.checked), 500)
+                       if (checkBoxStatus) {
+                           dispatch(
+                               isUnCompleted({
+                                   id: props.id
+                               })
+                           )
+                       } else dispatch(
+                           isCompleted({
+                               id: props.id
+                           })
+                       )
+                   }*/

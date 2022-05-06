@@ -19,6 +19,7 @@ const InputSection = () => {
                     id: nanoid(),
                     title: taskText,
                     createdAt: time,
+                    isComplete: false
                 }),
                 setText('')
             )

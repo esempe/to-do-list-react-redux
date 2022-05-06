@@ -4,9 +4,9 @@ import {useSelector} from "react-redux";
 import { useParams } from "react-router-dom";
 import TaskItem from "./taskItem/taskItem";
 
-const TaskListSection = () => {
+const CompletedTaskListSection = () => {
     let tasks = useSelector(state => state.tasks)
-    let filteredTasks = tasks.filter( task => task.isComplete === false)
+    let filteredTasks = tasks.filter( task => task.isComplete === true)
     let renderedTasks = filteredTasks.map(task =>
         <TaskItem title={task.title} id={task.id} isComplete={task.isComplete}/>
     )
@@ -17,4 +17,4 @@ const TaskListSection = () => {
     );
 };
 
-export default TaskListSection;
+export default CompletedTaskListSection;
