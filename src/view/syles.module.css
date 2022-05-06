@@ -71,3 +71,20 @@ body{
     background-color: #7D7D7D;
     border-radius: 2px;
 }
+.navSection{
+    margin-right: 35px;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.active{
+    color: black;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.navItem{
+    color: #7D7D7D;
+    transition: 0.2s;
+
+}

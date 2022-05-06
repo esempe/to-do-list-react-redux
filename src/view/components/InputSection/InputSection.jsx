@@ -7,21 +7,22 @@ import {nanoid} from "@reduxjs/toolkit";
 const InputSection = () => {
 
     let [taskText, setText] = useState('');
+
     let dispatch = useDispatch()
 
     let time = useSelector(state => state.time).currentTime
 
     const onTextChange = e => setText(e.target.value)
-    let onTaskSave = () =>{
-        if(taskText){
-            dispatch(
-                addTask({
-                    id:nanoid(),
+    let onTaskSave = () => {
+        if (taskText) {
+            dispatch(addTask({
+                    id: nanoid(),
                     title: taskText,
                     createdAt: time,
                 }),
                 setText('')
             )
+
         }
     }
 
@@ -39,8 +40,10 @@ const InputSection = () => {
                        onChange={onTextChange}
                 />
                 <div className={styles.inputButton}
-                    onClick={onTaskSave}
-                ></div>
+                     onClick={onTaskSave}
+                >
+                    <div className={styles.inputButtonCross}></div>
+                </div>
             </div>
         </div>
     );

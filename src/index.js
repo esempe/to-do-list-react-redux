@@ -6,13 +6,14 @@ import {Provider} from "react-redux";
 import store from "./data/store";
 import {BrowserRouter} from "react-router-dom";
 
+let beb = 15;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
       <Provider store={store}>
 
           <BrowserRouter>
-              <App/>
+              <App beb={beb}/>
           </BrowserRouter>
 
       </Provider>

@@ -28,13 +28,19 @@
 
 .taskItemControl{
     display: flex;
-
+    gap: 10px;
 }
 .deleteTask{
-
+    position: relative;
+    bottom:5px;
+    height: 25px;
+    width:  25px;
+    background: url('../../img/delete.svg')0px 0 /100% 100%  no-repeat;
 }
 .editTask{
-
+    height: 20px;
+    width:  20px;;
+    background: url('../../img/edit.svg')  no-repeat;;
 }
 .starTask{
 

@@ -27,7 +27,7 @@
 }
 .taskItemControl{
     display: flex;
-
+    gap: 10px;
 }
 .textArea{
     background-color: #F1EFE1;
@@ -36,10 +36,16 @@
     height: 25px;
 }
 .deleteTask{
-
+    position: relative;
+    bottom:4px;
+    height: 25px;
+    width:  25px;
+    background: url('../../../img/delete.svg')0px 0 /100% 100%  no-repeat;
 }
 .editTask{
-
+    height: 25px;
+    width:  25px;
+    background: url('../../../img/back.svg') 0 0/100% 100%  no-repeat;
 }
 .starTask{
 

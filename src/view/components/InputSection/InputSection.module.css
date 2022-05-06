@@ -109,15 +109,60 @@ body{
 }
 
 .inputButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    background-color: #B59182;
+    width: 45px;
+    height: 32px;
+    background: #B59182;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.inputButton:active{
+    position: relative;
     width: 45px;
     height: 32px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     cursor: pointer;
+
 }
-.inputButton::before{
+
+.inputButtonCross{
+    background: #B59182 url('../../img/Add_Plus.svg') 50% no-repeat;
+    width: 15px;
+    height: 15px;
+    animation: button__circle;
+    animation-duration: 1s;
+    animation-play-state: paused;
+
+}
+/*.inputButton:hover .inputButtonCross{
+    background: #B59182 url('../../img/Add_Plus.svg') 50% no-repeat;
+    width: 15px;
+    height: 15px;
+    animation: button__circle;
+    animation-duration: 1s;
+}*/
+.inputButtonCross:hover{
+}
+
+
+
+@keyframes button__circle{
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/*.inputButton::before{
     content: '';
     position: absolute;
     height: 2px;
@@ -137,4 +182,4 @@ body{
     background-color: #F9F9F9;
     bottom: 50%;
     right: 14px;
-}
+}*/
