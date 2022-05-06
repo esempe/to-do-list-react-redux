@@ -1,6 +1,6 @@
 {
-  "homepage": "https://esempe.github.io/to-do-list-react-redux/",
-  "name": "chess",
+  "homepage": "https://esempe.github.io/to-do-list-react-redux",
+  "name": "to-do-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
