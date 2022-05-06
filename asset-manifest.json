@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/to-do-list-react-redux/static/css/main.b52e19f2.css",
+    "main.js": "/to-do-list-react-redux/static/js/main.a347c690.js",
+    "static/js/787.497f1025.chunk.js": "/to-do-list-react-redux/static/js/787.497f1025.chunk.js",
+    "static/media/delete.svg": "/to-do-list-react-redux/static/media/delete.3373c3556c65d0fe3505.svg",
+    "static/media/edit.svg": "/to-do-list-react-redux/static/media/edit.f4279e5bc6c692be08be.svg",
+    "index.html": "/to-do-list-react-redux/index.html",
+    "static/media/back.svg": "/to-do-list-react-redux/static/media/back.827aa4d9f163c7724aff.svg",
+    "static/media/Add_Plus.svg": "/to-do-list-react-redux/static/media/Add_Plus.d59fe29a0d86f9717711.svg",
+    "main.b52e19f2.css.map": "/to-do-list-react-redux/static/css/main.b52e19f2.css.map",
+    "main.a347c690.js.map": "/to-do-list-react-redux/static/js/main.a347c690.js.map",
+    "787.497f1025.chunk.js.map": "/to-do-list-react-redux/static/js/787.497f1025.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b52e19f2.css",
+    "static/js/main.a347c690.js"
+  ]
+}
