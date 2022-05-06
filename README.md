@@ -1,5 +1,4 @@
-https://esempe.github.io/to-do-list-react-redux/
-
+https://esempe.github.io/to-do-list-react-redux-pet-project-/
 link to open project in web.
 
 P S
