@@ -81,5 +81,4 @@ const SingleTaskItem = (props) => {
     );
 };
 
-
 export default SingleTaskItem;
